@@ -36,8 +36,8 @@ def registros():
         if form.validate():
             connection = sqlite3.connect("../videojuegos.db")
             connection.text_factory = str
-            df = pd.read_sql_query("SELECT * from educativa", connection)
-            data = df[(df['Name'].str.contains(primero))][['Name','Platform','Genre', 'NA_Sales','EU_Sales','JP_Sales','Other_Sales','Global_Sales']]
+            df = pd.read_sql_query("SELECT * from juegos", connection)
+            data = df[(df['Name'].str.contains(primero))][['Rank','Name','Platform','Genre','Publisher', 'NA_Sales','EU_Sales','JP_Sales','Other_Sales','Global_Sales']]
             tabla = data.to_html()
             data = data.to_dict(orient="records")
             numero = len(data)

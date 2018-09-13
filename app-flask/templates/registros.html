@@ -35,9 +35,9 @@
 
       <table class="table">
         <tr>
+          <th>Rango</th>
           <th>Nombre</th>
-          <th>Plataforma</th>
-          <th>Año</th>
+          <th>Plataforma</th>        
           <th>Género</th>
           <th>Empresa</th>
           <th>NA_Ventas</th>
@@ -50,17 +50,16 @@
 
         {% for d in data %}
         <tr>
+          <td>{{d['Rank'].decode('utf-8')}}</td>
           <td>{{d['Name'].decode('utf-8')}}</td>
-          <td>{{d['Platform'].decode('utf-8')}}</td>
-          <td>{{d['Year'].decode('utf-8')}}</td>
+          <td>{{d['Platform'].decode('utf-8')}}</td>        
           <td>{{d['Genre'].decode('utf-8')}}</td>
           <td>{{d['Publisher'].decode('utf-8')}}</td>
           <td>{{d['NA_Sales'].decode('utf-8')}}</td>
+          <td>{{d['EU_Sales'].decode('utf-8')}}</td>
           <td>{{d['JP_Sales'].decode('utf-8')}}</td>
           <td>{{d['Other_Sales'].decode('utf-8')}}</td>
           <td>{{d['Global_Sales'].decode('utf-8')}}</td>
-          
-
 
         </tr>
 
