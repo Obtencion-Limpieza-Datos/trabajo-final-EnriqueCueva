@@ -30,7 +30,7 @@ def registros():
     numero = None
     if request.method == 'POST':
         primero = request.form['primero']
-        primero = primero.upper()
+        #primero = primero.upper()
         print ("%s" % (primero))
 
         if form.validate():
